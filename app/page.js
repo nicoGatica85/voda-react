@@ -1,9 +1,19 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Button from 'react-bootstrap/Button';
+import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle, ProgressBar } from "react-bootstrap";
+import Sidebar from "@/components/Sidebar";
+import Logo from "@/components/Logo";
+import HeadPanelMenu from "@/components/HeadPanelMenu";
+import HeadPanelUser from "@/components/HeadPanelUser";
+import './styles.css';
+
+
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    /*<main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -90,6 +100,23 @@ export default function Home() {
           </p>
         </a>
       </div>
+    </main>*/
+    
+      
+    <main>
+      <div className="d-flex fixed-top">
+        <div className="">
+          <Logo />
+        </div>
+        <div className="headPanel fixed-top d-flex align-items-center justify-content-between">
+          <HeadPanelMenu />
+        </div>
+      </div>
+      <div className="">
+        <Sidebar />      
+      </div>
+      
     </main>
+    
   );
 }
