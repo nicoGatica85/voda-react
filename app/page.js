@@ -6,10 +6,8 @@ import Sidebar from "@/components/Sidebar";
 import Logo from "@/components/Logo";
 import HeadPanelMenu from "@/components/HeadPanelMenu";
 import HeadPanelUser from "@/components/HeadPanelUser";
-import './styles.css';
-
-
-
+import ownStyles from './styles.module.css';
+import MainPanel from "@/components/MainPanel";
 
 export default function Home() {
   return (
@@ -104,16 +102,18 @@ export default function Home() {
     
       
     <main>
-      <div className="d-flex fixed-top">
-        <div className="">
+      <div className={`fixed-top d-flex justify-content-between align-items-center ps-4 ${ownStyles.logo}`}>
           <Logo />
-        </div>
-        <div className="headPanel fixed-top d-flex align-items-center justify-content-between">
-          <HeadPanelMenu />
-        </div>
       </div>
-      <div className="">
+      <div className={`fixed-top d-flex justify-content-between align-items-center ${ownStyles.headPanel}`}>
+          <HeadPanelMenu />
+          <HeadPanelUser />
+      </div>
+      <div  className={`position-fixed py-2 vh-100 ${ownStyles.sidebar}`}>
         <Sidebar />      
+      </div>
+      <div>
+        <MainPanel />
       </div>
       
     </main>

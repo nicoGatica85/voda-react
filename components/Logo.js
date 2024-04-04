@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import '../app/styles.css';
 import { FaBars } from "react-icons/fa";
+import ownStyles from '../app/styles.module.css';
 
 const Logo = () => {
     return (
         <>
-            <div className="logo d-flex justify-content-between align-items-center pe-3 ps-3">
                 <a href="#">
                     <Image 
                     width={140}
@@ -14,17 +13,16 @@ const Logo = () => {
                     src='/img/voda-logo.png'
                     />
                 </a>
-                <a href="#" className="logoBar">
+                <a href="#" className={`${ownStyles.logoBar}`}>
                     <FaBars
                         style={{
-                            color: 'white',
+                            color: '#83acd6',
                         }}
                     />
                 </a>
                 <a>
                     <i></i>
                 </a>
-            </div>
         </>
         
         

@@ -1,50 +1,51 @@
 import React from "react";
-import { Nav, NavLink } from "react-bootstrap";
 import { FaHistory } from "react-icons/fa";
+import { BsFileEarmarkText } from "react-icons/bs";
+import { MdOutlineAttachMoney } from "react-icons/md";
+import { RiCalendarCheckFill } from "react-icons/ri";
+import { RiKey2Fill } from "react-icons/ri";
 import '../app/styles.css';
-
+import Link from "next/link";
+import ownStyles from '../app/styles.module.css';
 
 const HeadPanelMenu = () => {
     return (
-        <div className="navbar ">
-            <Nav className="">
-                <NavLink href="#" className="fs-sm NavEach align-items-center d-flex flex-column">
-                    <FaHistory
-                        style={{
-                            color: '#83acd6',
-                            fontSize: 28,
-                            /*fontWeight: 80,*/
-                            strokeWidth: 10,
-                        }}
-                    />
-                    <span className="fs-sm">Historial</span>
-                </NavLink>
-            </Nav>
-            <Nav className="">
-                <NavLink href="#" className="">
-                    <i></i>
-                    <span>Reportes</span>
-                </NavLink>
-            </Nav>
-            <Nav className="">
-                <NavLink href="#" className="">
-                <i></i>
-                    <span>Ventas</span>
-                </NavLink>
-            </Nav>
-            <Nav className="">
-                <NavLink href="#" className="">
-                    <i></i>
-                    <span>Turnos</span>
-                </NavLink>
-            </Nav>
-            <Nav className="">
-                <NavLink href="#" className="">
-                    <i></i>
-                    <span>Permisos</span>
-                </NavLink>
-            </Nav>
-            
+        <div className="d-flex align-items-center">
+                <Link href={'#'} style={{textDecoration: 'none'}} className={`d-flex ${ownStyles.linkHead}`}>
+                    <div className={`d-grid ${ownStyles.innerLink}`}>
+                        <FaHistory className={`d-flex text-center fs-3 ${ownStyles.iconHead}`}
+                        />
+                        <span className={`fw-light mt-1 ${ownStyles.textHead}`}>Historial</span>
+                    </div>
+                </Link>
+                <Link href={'#'} style={{textDecoration: 'none'}} className={`d-flex ${ownStyles.linkHead}`}>
+                    <div className={`d-grid ${ownStyles.innerLink}`}>
+                        <BsFileEarmarkText className={`d-flex text-center fs-3 ${ownStyles.iconHead}`}
+                        />
+                        <span className={`fw-light mt-1 ${ownStyles.textHead}`}>Reportes</span>
+                    </div>
+                </Link>
+                <Link href={'#'} style={{textDecoration: 'none'}} className={`d-flex ${ownStyles.linkHead}`}>
+                    <div className={`d-grid ${ownStyles.innerLink}`}>
+                        <MdOutlineAttachMoney className={`d-flex text-center fs-3 ${ownStyles.iconHead}`}
+                        />
+                        <span className={`fw-light mt-1 ${ownStyles.textHead}`}>Ventas</span>
+                    </div>
+                </Link>
+                <Link href={'#'} style={{textDecoration: 'none'}} className={`d-flex ${ownStyles.linkHead}`}>
+                    <div className={`d-grid ${ownStyles.innerLink}`}>
+                        <RiCalendarCheckFill className={`d-flex text-center fs-3 ${ownStyles.iconHead}`}
+                        />
+                        <span className={`fw-light mt-1 ${ownStyles.textHead}`}>Turnos</span>
+                    </div>
+                </Link>
+                <Link href={'#'} style={{textDecoration: 'none'}} className={`d-flex ${ownStyles.linkHead}`}>
+                    <div className={`d-grid ${ownStyles.innerLink}`}>
+                        <RiKey2Fill className={`d-flex text-center fs-3 ${ownStyles.iconHead}`}
+                        />
+                        <span className={`fw-light mt-1 ${ownStyles.textHead}`}>Permisos</span>
+                    </div>
+                </Link>
         </div>
         
         
