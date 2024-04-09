@@ -17,7 +17,7 @@
 .headPanel {
   background-color: #0866C6;
   height: 70px;
-  left: 240px;
+  left: 240px !important;
 }
 
 .linkHead {
@@ -84,9 +84,21 @@
 
 /* sidebar */
 .sidebar {
-  background-color: rgb(33, 37, 41);
-    width: 240px;
-    top: 70px;
+  width: 240px;
+  overflow-y: auto;
+  top: 70px;
+  bottom: 0;
+  padding: 10px 0;
+  background-color: #212529;
+  transition: all 0.2s ease-in-out;
+}
+
+.mainpanel{
+  margin-left: 240px;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 70px;
+  transition: all 0.2s ease-in-out;
 }
 
 .boxItemSidebar {

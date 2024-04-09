@@ -2,17 +2,19 @@ import React from "react";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import ownStyles from '../app/styles.module.css';
+import Link from "next/link";
 
 const Logo = () => {
     return (
         <>
-                <a href="#">
+                <Link href="/">
                     <Image 
                     width={140}
                     height={65}    
                     src='/img/voda-logo.png'
+                    alt="Logo Voda"
                     />
-                </a>
+                </Link>
                 <a href="#" className={`${ownStyles.logoBar}`}>
                     <FaBars
                         style={{

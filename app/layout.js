@@ -1,8 +1,11 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import ownStyles from './styles.module.css';
+import Logo from "@/components/Logo";
+import HeadPanelMenu from "@/components/HeadPanelMenu";
+import HeadPanelUser from "@/components/HeadPanelUser";
+import Sidebar from "@/components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +18,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head></head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}
+        <main>
+          <div className={`fixed-top d-flex justify-content-between align-items-center ps-4 ${ownStyles.logo}`}>
+            <Logo />
+          </div>
+          <div className={`fixed-top d-flex justify-content-between align-items-center ${ownStyles.headPanel}`}>
+            <HeadPanelMenu />
+            <HeadPanelUser />
+          </div>
+          <div className={`position-fixed py-2 vh-100 ${ownStyles.sidebar}`}>
+            <Sidebar />
+          </div>
+          <div className={`${ownStyles.mainpanel}`}>
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
